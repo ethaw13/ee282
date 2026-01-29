@@ -29,12 +29,12 @@ mymatrix <- matrix(c(5, 4, 3, 2, 5, 4), nrow = 3, ncol = 2)
 
 
 **Question:** Which command will show the output with headers?
-```
+
   V1
 1  5
 2  4
 3  3
-
+```
 
 A. `mymatrix[,1]`  
 B. `data_frame[,1]`  
