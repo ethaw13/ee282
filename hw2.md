@@ -24,15 +24,11 @@ print(mymatrix)
  [2,]    2    5
  [3,]    3    6
 
-mymatrix <- matrix(c(5, 4, 3, 2, 5, 4), nrow = 3, ncol = 2)
-
-
-
 **Question:** Which command will show the output with headers?
 
   V1
-1  5
-2  4
+1  1
+2  2
 3  3
 ```
 
@@ -43,11 +39,22 @@ D. `data_frame[[1]]`
 
 ---
 
-**Answer: C** `survey_df[1]` keeps the data structure with column names, while the others just return the numbers `[1] 5 4 3`
+**Answer: C** `data_frame[1]` keeps the data structure with column names, while the others just return the numbers `[1] 1 2 3`
 
+# Problem 3
 
+You have a script.sh and want it to be usable by everyone, but only writable by the creator. What form of chmod `XXX` octal permissions would you use?
+A. `chmod 777 script.sh`  
+B. `chmod 755 script.sh`  
+C. `chmod 644 script.sh`  
+D. `chmod 700 script.sh`
 
+---
 
+**Answer: B** - `chmod 755 script.sh`
 
- 
+**Explanation:**
+- 7 (owner): read + write + execute
+- 5 (group): read + execute
+- 5 (others): read + execute 
 
