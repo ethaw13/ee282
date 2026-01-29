@@ -7,7 +7,7 @@ B. `mkdir homework && cd ~`
 C. `cd ../ && mkdir homework`  
 D. `cd ~/ && mkdir homework`  
 
-##### Correct Answer
+**Answer: D**
 
 cd ~/ && mkdir homework
 
@@ -43,15 +43,11 @@ D. `data_frame[[1]]`
 
 ---
 
-**Answer: C** - `survey_df[1]` keeps the data structure with column names, while the others just return the numbers `[1] 5 4 3`
+**Answer: C** `survey_df[1]` keeps the data structure with column names, while the others just return the numbers `[1] 5 4 3`
 
 
 
 
-- print(mymatrix[,1]) = [1] 1 2 3
-- mydf <- as.data.frame(mymatrix) then print(mydf[,1]) = [1] 1 2 3
-- print(mydf[1]) = data frame with one column (V1 with values 1, 2, 3)
-- print(mydf[[1]]) = [1] 1 2 3
- 
+
  
 
