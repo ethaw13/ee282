@@ -14,16 +14,39 @@ cd ~/ && mkdir homework
 
 # Problem 2
 
-You are trying to access a specific value in an example matrix data set by:
-
+You are trying to access some values in an example matrix data set by:
+```
 mymatrix <- matrix(c(1, 2, 3, 4, 5, 6), nrow = 3, ncol = 2)
+data_frame <- as.data.frame(mymatrix)
 print(mymatrix)
-#      [,1] [,2]
-# [1,]    1    4
-# [2,]    2    5
-# [3,]    3    6
+      [,1] [,2]
+ [1,]    1    4
+ [2,]    2    5
+ [3,]    3    6
 
-Match what each input would input what value?
+mymatrix <- matrix(c(5, 4, 3, 2, 5, 4), nrow = 3, ncol = 2)
+
+
+
+**Question:** Which command will show the output with headers?
+```
+  V1
+1  5
+2  4
+3  3
+
+
+A. `mymatrix[,1]`  
+B. `data_frame[,1]`  
+C. `data_frame[1]`  
+D. `data_frame[[1]]`
+
+---
+
+**Answer: C** - `survey_df[1]` keeps the data structure with column names, while the others just return the numbers `[1] 5 4 3`
+
+
+
 
 - print(mymatrix[,1]) = [1] 1 2 3
 - mydf <- as.data.frame(mymatrix) then print(mydf[,1]) = [1] 1 2 3
@@ -31,19 +54,4 @@ Match what each input would input what value?
 - print(mydf[[1]]) = [1] 1 2 3
  
  
-print(mymatrix[,1])
-# [1] 1 2 3
-
-mydf <- as.data.frame(mymatrix)
-print(mydf[,1])
-# [1] 1 2 3
-
-print(mydf[1])
-#   V1
-# 1  1
-# 2  2
-# 3  3
-
-print(mydf[[1]])
-# [1] 1 2 3
 
