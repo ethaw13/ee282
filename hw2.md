@@ -44,6 +44,7 @@ D. `data_frame[[1]]`
 # Problem 3
 
 You have a script.sh and want it to be usable by everyone, but only writable by the creator. What form of chmod `XXX` octal permissions would you use?
+
 A. `chmod 777 script.sh`  
 B. `chmod 755 script.sh`  
 C. `chmod 644 script.sh`  
