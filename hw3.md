@@ -18,4 +18,13 @@
 #### U count: mean 76242.3 sd 1379508.4
 #### L count: mean 0.0 sd 0.0
 #### %0.00 masked total, %0.00 masked real
- 
+
+### Total # of nucleotides: 143,726,002
+### Total # of Ns: 1,152,978
+### Total # of sequences: 1,870
+
+## Summarize an annotation file
+
+### md5sum dmel-all-r6.66.gtf.gz to check integrity of file
+
+#### 
