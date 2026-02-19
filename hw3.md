@@ -7,6 +7,8 @@
  or
 ####`vim md5sum.txt' to check if the hash is the same
 
+##### results in a hash of: ccb86e94117eb4eeaaf70efb6be1b6b9  dmel-all-chromosome-r6.66.fasta.gz
+
 ## Calculate summaries of the genome
 
 ### '../faSize dmel-all-chromosome-r6.66.fasta.gz' to print summaries of .fasta file
@@ -27,4 +29,6 @@
 
 ### md5sum dmel-all-r6.66.gtf.gz to check integrity of file
 
-#### 
+#### results in ea600dbb86f1779463f69082131753cd  dmel-all-r6.66.gtf.gz
+ 
+###
