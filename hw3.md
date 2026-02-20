@@ -90,3 +90,6 @@ Total # of genes per chromosome arm:
 | X | 2,704 |
 | 4 | 114 |
 | Y | 113 |
+
+
+# NOTE: both fasta and gtf .gz's are downloaded locally, and github does not support files >100MB. I can provide source data files if requested.
