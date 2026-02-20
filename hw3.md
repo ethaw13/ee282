@@ -31,4 +31,37 @@
 
 #### results in ea600dbb86f1779463f69082131753cd  dmel-all-r6.66.gtf.gz
  
-###
+### bioawk -c gff '{print $feature}' dmel-all-r6.66.gtf.gz | sort | uniq -c
+ 190176 exon
+ 163377 CDS
+  46856 5UTR
+  33778 3UTR
+  30922 start_codon
+  30862 stop_codon
+  30836 mRNA
+  17872 gene
+   3059 ncRNA
+    485 miRNA
+    365 pseudogene
+    312 tRNA
+    270 snoRNA
+    262 pre_miRNA
+    115 rRNA
+     32 snRNA
+
+#### bioawk -c gff '$feature=="gene" {print $seqname}' dmel-all-r6.66.gtf.gz | grep -E "^(X|Y|2L|2R|3L|3R|4)$" | sort | uniq -c | sort -nr
+   3508 2L
+   3649 2R
+   3481 3L
+   4226 3R
+    114 4
+   2704 X
+    113 Y
+
+Total # of genes per chromosome arm:
+X: 2704
+Y: 113
+2L: 3508
+3L: 3481
+3R: 4226
+4: 114
