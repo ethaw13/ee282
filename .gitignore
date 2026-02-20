@@ -1,0 +1,4 @@
+# ignore large files
+*fasta
+*fa
+*gz
