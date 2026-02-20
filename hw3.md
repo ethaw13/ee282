@@ -5,7 +5,7 @@
 We use `md5sum` of the `.gz` file and compare it to the `md5sum.txt` that FlyBase provides:
 
 ```
-grep dmel-all-chromosome-r6.66.fasta.gz md5sum.txt
+grep ../dmel-all-chromosome-r6.66.fasta.gz md5sum.txt
 ```
 
 Or alternatively, `vim md5sum.txt` to manually check the hash.
@@ -18,7 +18,7 @@ Or alternatively, `vim md5sum.txt` to manually check the hash.
 
 Command used:
 ```
-../faSize dmel-all-chromosome-r6.66.fasta.gz
+../faSize ../dmel-all-chromosome-r6.66.fasta.gz
 ```
 
 Output:
@@ -41,16 +41,16 @@ L count: mean 0.0 sd 0.0
 
 Integrity check:
 ```
-md5sum dmel-all-r6.66.gtf.gz
+md5sum ../dmel-all-r6.66.gtf.gz
 ```
 
-**Result:** `ea600dbb86f1779463f69082131753cd  dmel-all-r6.66.gtf.gz`
+**Result:** `ea600dbb86f1779463f69082131753cd ../dmel-all-r6.66.gtf.gz`
 
 ### Feature Counts
 
 Command:
 ```
-bioawk -c gff '{print $feature}' dmel-all-r6.66.gtf.gz | sort | uniq -c
+bioawk -c gff '{print $feature}' ../dmel-all-r6.66.gtf.gz | sort | uniq -c
 ```
 
 | Count | Feature |
@@ -76,7 +76,7 @@ bioawk -c gff '{print $feature}' dmel-all-r6.66.gtf.gz | sort | uniq -c
 
 Command:
 ```
-bioawk -c gff '$feature=="gene" {print $seqname}' dmel-all-r6.66.gtf.gz | grep -E "^(X|Y|2L|2R|3L|3R|4)$" | sort | uniq -c | sort -nr
+bioawk -c gff '$feature=="gene" {print $seqname}' ../dmel-all-r6.66.gtf.gz | grep -E "^(X|Y|2L|2R|3L|3R|4)$" | sort | uniq -c | sort -nr
 ```
 
 Total # of genes per chromosome arm:
