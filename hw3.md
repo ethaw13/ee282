@@ -44,7 +44,7 @@ Integrity check:
 md5sum ../dmel-all-r6.66.gtf.gz
 ```
 
-**Result:** `ea600dbb86f1779463f69082131753cd ../dmel-all-r6.66.gtf.gz`
+**Result:** `ea600dbb86f1779463f69082131753cd dmel-all-r6.66.gtf.gz`
 
 ### Feature Counts
 
