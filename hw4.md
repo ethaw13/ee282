@@ -29,8 +29,8 @@ Resulting in:
 
 ### Plots of the following for all all sequences ≤ 100kb and all sequences > 100kb:
 
-bioawk -c fastx '{print length($seq), gc($seq)}' 99kb.fa > 99kb_stats.txt
-bioawk -c fastx '{print length($seq), gc($seq)}' 101kb.fa > 101kb_stats.txt
+bioawk -c fastx 'length($seq)<=100000 {print ">"$name"\n"$seq}' ../dmel-all-chromosome-r6.66.fasta > 99kb.fa
+bioawk -c fastx 'length($seq)>100000 {print ">"$name"\n"$seq}' ../dmel-all-chromosome-r6.66.fasta > 101kb.fa
 
 grep -c ">" 101kb.fa
 that outputs
@@ -40,11 +40,18 @@ grep -c ">" 99kb.fa
 outputs 
 1863
 
+bioawk -c fastx '{print length($seq), gc($seq)}' 99kb.fa > 99kb_stats.txt
+bioawk -c fastx '{print length($seq), gc($seq)}' 101kb.fa > 101kb_stats.txt
 
+R
 1) Sequence length distribution histogram, potentially a logscale
 
-
 2) Sequence GC% distribution histogram
+Run
+source ("scripts/length-distribution.R")
+source ("scripts/cumulative-size.R")
+
+
 3) Cumulative sequence size sorted from largest to smallest. Use plotCDF
 
 
