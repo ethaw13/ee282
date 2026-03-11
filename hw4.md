@@ -25,38 +25,33 @@ Resulting in:
 - Total # of Ns: 1,152,978
 - Total # of sequences: 1,870
 
-## Genome Assembly
+### Calculate the following for all sequences ≤100kb and all sequences > 100kb:
 
-### Plots of the following for all all sequences ≤ 100kb and all sequences > 100kb:
+bioawk -c fastx 'length($seq)<=100000 {print ">"$name"\n"$seq}' ../dmel-all-chromosome-r6.66.fasta > output/99kb.fa
+bioawk -c fastx 'length($seq)>100000 {print ">"$name"\n"$seq}' ../dmel-all-chromosome-r6.66.fasta > output/101kb.fa
 
-bioawk -c fastx 'length($seq)<=100000 {print ">"$name"\n"$seq}' ../dmel-all-chromosome-r6.66.fasta > 99kb.fa
-bioawk -c fastx 'length($seq)>100000 {print ">"$name"\n"$seq}' ../dmel-all-chromosome-r6.66.fasta > 101kb.fa
-
-grep -c ">" 101kb.fa
+grep -c ">" output/101kb.fa
 that outputs
 7
 
-grep -c ">" 99kb.fa
+grep -c ">" output/99kb.fa
 outputs 
 1863
 
-bioawk -c fastx '{print length($seq), gc($seq)}' 99kb.fa > 99kb_stats.txt
-bioawk -c fastx '{print length($seq), gc($seq)}' 101kb.fa > 101kb_stats.txt
+bioawk -c fastx '{print length($seq), gc($seq)}' 99kb.fa > output/99kb_stats.txt
+bioawk -c fastx '{print length($seq), gc($seq)}' 101kb.fa > output/101kb_stats.txt
 
 R
 1) Sequence length distribution histogram, potentially a logscale
-
 2) Sequence GC% distribution histogram
-Run
-source ("scripts/length-distribution.R")
-source ("scripts/cumulative-size.R")
-
-
 3) Cumulative sequence size sorted from largest to smallest. Use plotCDF
+Run
+source ("scripts/plot-sequences.R")
 
 
 
 
+## Genome Assembly
 
 ### Assemble a genome using Pacbio HiFi reads
 
@@ -69,4 +64,20 @@ output:
 [M::main] Version: 0.16.1-r375
 [M::main] CMD: hifiasm -o iso1 -t 16 ISO_HiFi_Shukla2025.fasta.gz
 [M::main] Real time: 2925.937 sec; CPU: 45407.865 sec; Peak RSS: 17.650 GB
+
+### Assembly assignment
+
+#### Treating assembly from iso1.bp.p_ctg.gfa
+
+# First we convert the .gfa to a .fa
+
+awk '/^S/{print ">"$2"\n"$3}' hifiasm-output/iso1.bp.p_ctg.gfa > output/iso1_primary.fa
+
+# Extract sequence lengths
+bioawk -c fastx '{print length($seq)}' output/iso1_primary.fa > output/iso_lengths.txt
+
+# Sort in reverse order from largest to smallest
+sort -nr output/iso_lengths.txt > output/iso_lengths_sorted.txt
+
+
 
