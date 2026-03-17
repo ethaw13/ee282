@@ -1,6 +1,6 @@
-# Homework 4 Pipeline
+For output plots, please look in the output/ directory
 
-*** FOR PLOTS LOOK IN THE OUTPUT/ DIRECTORY
+# Homework 4 Pipeline
 
 ## Summarize Partitions of a Genome Assembly
 
