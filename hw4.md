@@ -1,4 +1,4 @@
-For output plots, please look in the output/ directory
+# For output plots, please look in the output/ directory
 
 # Homework 4 Pipeline
 
