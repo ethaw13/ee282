@@ -1,5 +1,7 @@
 # Homework 4 Pipeline
 
+*** FOR PLOTS LOOK IN THE OUTPUT/ DIRECTORY
+
 ## Summarize Partitions of a Genome Assembly
 
 ### Overall Assembly Summary
