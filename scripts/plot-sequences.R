@@ -1,8 +1,8 @@
 library(ggplot2)
 
 
-le <- read.table("99kb_stats.txt", col.names = c("length","gc"))
-gt <- read.table("101kb_stats.txt", col.names = c("length","gc"))
+le <- read.table("output/99kb_stats.txt", col.names = c("length","gc"))
+gt <- read.table("output/101kb_stats.txt", col.names = c("length","gc"))
 
 ############################################
 # 1. Sequence length distribution (histogram, log scale)

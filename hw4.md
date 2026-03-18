@@ -61,7 +61,7 @@ Generate plots in R:
 
 1. Sequence length distribution histogram (log scale recommended)
 2. Sequence GC% distribution histogram
-3. Cumulative sequence size sorted from largest to smallest (use `plotCDF`)
+3. Cumulative sequence size sorted from largest to smallest
 
 ```R
 source("scripts/plot-sequences.R")
@@ -144,6 +144,8 @@ bioawk -c fastx '{print length($seq)}' ../dmel-all-chromosome-r6.66.fasta | sort
 
 Rscript scripts/plot-contiguity.R
 ```
+
+![Contiguity comparisons ](output/contiguity_plot.png)
 
 ---
 
