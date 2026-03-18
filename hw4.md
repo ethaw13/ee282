@@ -67,6 +67,16 @@ Generate plots in R:
 source("scripts/plot-sequences.R")
 ```
 ![Sequence length distribution for more than 100kb ](output/length_hist_101kb.png)
+
+![Sequence length distribution for less than 100kb ](output/length_hist_99kb.png)
+
+![Sequence GC distribution histogram for more than 100kb ](output/gc_hist_101kb.png)
+
+![Sequence GC distribution histogram for less than 100kb ](output/gc_hist_99kb.png)
+
+![Cumulative sequence size sorted largest to least for more than 100kb ](output/cdf_101kb.png)
+
+![Cumulative sequence size sorted largest to least for less than 100kb ](output/cdf_99kb.png)
 ---
 
 ## Genome Assembly
