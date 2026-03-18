@@ -66,7 +66,7 @@ Generate plots in R:
 ```R
 source("scripts/plot-sequences.R")
 ```
-
+![Sequence length distribution for more than 100kb ](output/length_hist_101kb.png)
 ---
 
 ## Genome Assembly
