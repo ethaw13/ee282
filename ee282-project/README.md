@@ -22,15 +22,11 @@ Despite overall high conservation, the conservation metrics illustrate very loca
 
 Mapping conservation scores onto the three-dimensional structure of CA provides structural context for these patterns. Structurally ordered regions, particularly alpha-helical segments, exhibit higher conservation, consistent with their functional role in capsid assembly. In contrast, loop regions and disordered linkers display variability, indicating less essential amino acids with reduced stability context. Together, these results emphasize the difference between sequence information and structural data within the CA protein.
 
-![text](analysis_results/conservation_plot_3groups.png)
-
 ### Viral strain comparisons in related retroviral capsid proteins indicates distantly related sequence evolution
 
 To further place capsid conservation in a broader evolutionary context, similar conservation profiles were compared across related retroviral families, including HIV-2, SIV, and HTLV-1 (Fig. 2). Amino acid sequences of each viral capsid protein were aligned with the reference HIV-1 CA protein sequence, enabling comparisons across homologous residues.
 
 Across viral families, HIV-1 exhibits the highest conservation across the CA sequence, with most residues hovering around ~45–60% conservation. In contrast, HTLV-1, HIV-2, and SIV display higher variability with around ~30–45% conservation, with distinct spikes in conservation suggesting localized structural constraints, similar to the temporal data shown in Fig. 1. Conservation is not uniformly distributed; instead, certain regions have elevated conservation, suggesting functionally constrained sites. This pattern suggests that capsid evolution between lineages and strains is not uniform, but reflects a balance between functional regions of the protein and flexible regions that are able to evolutionarily diverge.
-
-![text](analysis_results/viral_strain_comparison.png)
 
 ## Discussion
 
