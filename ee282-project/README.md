@@ -22,7 +22,26 @@ Despite overall high conservation, the conservation metrics illustrate very loca
 
 Mapping conservation scores onto the three-dimensional structure of CA provides structural context for these patterns. Structurally ordered regions, particularly alpha-helical segments, exhibit higher conservation, consistent with their functional role in capsid assembly. In contrast, loop regions and disordered linkers display variability, indicating less essential amino acids with reduced stability context. Together, these results emphasize the difference between sequence information and structural data within the CA protein.
 
+
 ![text](analysis_results/conservation_plot_3groups.png)
+
+Original CA protein structure: 
+
+![text](capsid_renders/ca.png)
+
+The colored conservation scores for 1975-2025:
+
+![text](capsid_renders/ca-1975.png)
+
+2000-2025:
+
+![text](capsid_renders/ca-2000.png)
+
+2015-2025:
+
+![text](capsid_renders/ca-2015.png)
+
+
 
 ### Viral strain comparisons in related retroviral capsid proteins indicates distantly related sequence evolution
 
