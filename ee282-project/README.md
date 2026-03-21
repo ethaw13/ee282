@@ -27,19 +27,19 @@ Mapping conservation scores onto the three-dimensional structure of CA provides 
 
 Original CA protein structure: 
 
-![text](capsid_renders/ca.png)
+![text](capsid-renders/ca.png)
 
 The colored conservation scores for 1975-2025:
 
-![text](capsid_renders/ca-1975.png)
+![text](capsid-renders/ca-1975.png)
 
 2000-2025:
 
-![text](capsid_renders/ca-2000.png)
+![text](capsid-renders/ca-2000.png)
 
 2015-2025:
 
-![text](capsid_renders/ca-2015.png)
+![text](capsid-renders/ca-2015.png)
 
 
 
